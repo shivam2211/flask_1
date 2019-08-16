@@ -1,0 +1,54 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Microblog</title>
+      {% else %}
+      <title>Welcome to Microblog</title>
+      {% endif %}
+    
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+      </script>
+
+    </head>
+    <body>
+        <div>
+                Microblog:
+                <a href="{{url_for('index')}}">Home</a>
+                <a href="{{ url_for('explore') }}">Explore</a>
+                {% if current_user.is_anonymous %}
+                <a href="{{ url_for('login') }}">Login</a>
+                {% else %}
+                <a href="{{ url_for('user', username=current_user.username) }}">Profile</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+                {% endif %}
+            </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+
+        <script>
+            function ajax_fun(destElem) {
+                $(destElem).html('<img src="{{ url_for('static', filename='loading.gif') }}">');
+
+                $.post('/translate', {}).done(function(response) {
+                    $(destElem).text(response['text'])
+                }).fail(function() {
+                    $(destElem).text("{{ _('Error: Could not contact server.') }}");
+                });
+                
+            }
+
+        </script>
+    </body>
+</html>

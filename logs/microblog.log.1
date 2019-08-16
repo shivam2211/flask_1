@@ -1,0 +1,133 @@
+2019-08-08 13:28:26,980 ERROR: Exception on /user/edit_profile [GET] [in c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "c:\users\lenovo_owner\microblog\venv\app\routes.py", line 80, in user
+    user = User.query.filter_by(username=username).first_or_404()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 432, in first_or_404
+    abort(404, description=description)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 774, in abort
+    return _aborter(status, *args, **kwargs)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 755, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "c:\users\lenovo_owner\microblog\venv\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2019-08-08 13:29:52,340 ERROR: Exception on /user/edit_profile [GET] [in c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "c:\users\lenovo_owner\microblog\venv\app\routes.py", line 80, in user
+    user = User.query.filter_by(username=username).first_or_404()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 432, in first_or_404
+    abort(404, description=description)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 774, in abort
+    return _aborter(status, *args, **kwargs)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\werkzeug\exceptions.py", line 755, in __call__
+    raise self.mapping[code](*args, **kwargs)
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "c:\users\lenovo_owner\microblog\venv\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2019-08-08 13:29:59,217 ERROR: Exception on /edit_profile [GET] [in c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "c:\users\lenovo_owner\microblog\venv\app\routes.py", line 96, in edit_profile
+    form = EditProfileForm()
+NameError: name 'EditProfileForm' is not defined
+2019-08-08 13:30:45,918 INFO: Microblog startup [in c:\users\lenovo_owner\microblog\venv\app\__init__.py:46]
+2019-08-08 13:31:07,150 ERROR: Exception on /edit_profile [GET] [in c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\lenovo_owner\microblog\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "c:\users\lenovo_owner\microblog\venv\app\routes.py", line 96, in edit_profile
+    form = EditProfileForm()
+NameError: name 'EditProfileForm' is not defined
+2019-08-08 13:32:20,203 INFO: Microblog startup [in c:\users\lenovo_owner\microblog\venv\app\__init__.py:46]
+2019-08-08 13:34:24,462 INFO: Microblog startup [in c:\users\lenovo_owner\microblog\venv\app\__init__.py:46]
